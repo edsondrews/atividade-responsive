@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Desktop First</title>
+    <style type="text/css">
+
+
+    .group{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.part{
+  width: 100%;
+  font-family: Helvetica;
+  text-align: center;
+  border-radius: 4px;
+  margin:0.2%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.laranja1, .laranja2{
+  background: #FE9407;
+  height: 50px;
+}
+
+.amarelo{
+  background: #E6E221;
+  height: 100px;
+}
+
+.campo{
+  width: 50%;
+  margin: 1%;
+}
+
+.azul1, .azul2, .azul3{
+  background: #3969BA;
+  height: 200px;
+}
+
+.cinza1, .cinza2, .cinza3, .cinza4{
+  background: #9B9B9B;
+  height: 70px;
+}
+
+h1 {
+  color:#1A1A1A;
+  font-size: 1em;
+}
+
+
+
+@media (min-width: 480px) {
+  .amarelo{
+    height: 200px;
+  }
+
+  .azul1, .azul2, .azul3{
+    height: 200px;
+
+  }
+
+  .cinza1, .cinza2, .cinza3, .cinza4{
+    width: 49.6%;
+  }
+}
+
+
+
+@media (min-width: 900px) {
+  .laranja1, .laranja2 {
+    width: 49.6%;
+  }
+
+  .amarelo{
+    height: 400px;
+  }
+
+  .azul1, .azul2, .azul3{
+    height: 200px;
+    width: 32.9%;
+  }
+
+  .cinza1, .cinza2, .cinza3, .cinza4{
+    width: 24.6%;
+  }
+}
+
+
+
+@media print {
+
+  footer,header{
+    display:none;
+  }
+}
+</style>
+
+    <script type="text/javascript" src="bowser.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="group group1">
+        <div class="part laranja1"><h1></h1></div>
+        <div class="part laranja2"><h1></h1></div>
+      </div>
+    </header>
+
+    <main>
+      <div class="group group2">
+        <div class="part amarelo">
+          <h1 id="titulo"></h1>
+          <script type="text/javascript">
+            document.getElementById("titulo").innerHTML = 'Você abriu essa página no navegador ' + bowser.name ;
+          </script>
+        </div>
+      </div>
+
+      <div class="group group3">
+        <div class="part azul1">
+          Formulário:
+          <form>
+            <input class="campo" placeholder="Nome" type="name" name="nome" title="Nome"/>
+            <input class="campo" placeholder="E-mail" type="email" name="email" title="E-mail"/>
+            <input class="campo" placeholder="Telefone" type="tel" name="telefone" title="Telefone"/>
+            <input class="campo" placeholder="CEP" type="text" name="cep" pattern="([0-9]{2}.[0-9]{3}-[0-9]{3})" title="Cep: 99.999-999" required />
+          </form>
+        </div>
+        <div class="part azul2"><h1></h1></div>
+        <div class="part azul3"><h1></h1></div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="group group4">
+        <div class="part cinza1"><h1></h1></div>
+        <div class="part cinza2"><h1></h1></div>
+        <div class="part cinza3"><h1></h1></div>
+        <div class="part cinza4"><h1></h1></div>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
